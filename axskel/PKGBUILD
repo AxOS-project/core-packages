@@ -1,0 +1,12 @@
+pkgname="axskel"
+pkgver="1.3"
+pkgrel="1"
+pkgdesc="skel configs and looks for AxOS"
+arch=("x86_64")
+
+
+package(){
+   mkdir -p ${pkgdir}/etc/skel/
+   cp -r ${srcdir}/.config/ ${pkgdir}/etc/skel/
+   cp -r ${srcdir}/.local/ ${pkgdir}/etc/skel/
+}

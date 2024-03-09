@@ -1,0 +1,3 @@
+ [Wallet]
+ Enabled=false
+ Close When Idle=false

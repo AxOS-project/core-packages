@@ -1,0 +1,16 @@
+static const char* script_lib_plymouth_string =
+  "#------------------------- Compatability Functions -------------------------\n"
+  "Plymouth.SetMessageFunction = Plymouth.SetDisplayMessageFunction;\n"
+  "\n"
+  "PlymouthSetRefreshFunction = Plymouth.SetRefreshFunction;\n"
+  "PlymouthSetBootProgressFunction = Plymouth.SetBootProgressFunction;\n"
+  "PlymouthSetRootMountedFunction = Plymouth.SetRootMountedFunction;\n"
+  "PlymouthSetKeyboardInputFunction = Plymouth.SetKeyboardInputFunction;\n"
+  "PlymouthSetUpdateStatusFunction = Plymouth.SetUpdateStatusFunction;\n"
+  "PlymouthSetDisplayNormalFunction = Plymouth.SetDisplayNormalFunction;\n"
+  "PlymouthSetDisplayPasswordFunction = Plymouth.SetDisplayPasswordFunction;\n"
+  "PlymouthSetDisplayQuestionFunction = Plymouth.SetDisplayQuestionFunction;\n"
+  "PlymouthSetMessageFunction = Plymouth.SetMessageFunction;\n"
+  "PlymouthSetQuitFunction = Plymouth.SetQuitFunction;\n"
+  "PlymouthGetMode = Plymouth.GetMode;\n"
+;

@@ -1,0 +1,23 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "zayronxio"
+            }
+        ],
+        "Name": "Deskclock",
+        "Id": "org.kde.plasma.Deskclock",
+        "Description": "A clean and customizable date/time display for your desktop based in job by qewer",
+        "Category": "Utilities",
+        "Icon": "org.kde.plasma.Deskclock",
+        "EnabledByDefault": true,
+        "License": "GPL-3.0+",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "1.0",
+        "Website": ""
+    },
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml"
+}

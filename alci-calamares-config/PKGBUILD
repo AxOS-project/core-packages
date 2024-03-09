@@ -1,0 +1,12 @@
+pkgname="calamares-config-axos"
+pkgver="3.2"
+pkgrel="3"
+pkgdesc="axos calamares config"
+arch=("x86_64")
+
+
+package(){
+   mkdir -p ${pkgdir}/
+   cp -r ${srcdir}/* ${pkgdir}/
+
+}

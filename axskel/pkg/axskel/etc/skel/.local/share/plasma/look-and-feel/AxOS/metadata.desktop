@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=AxOS
+Type=Service
+X-KDE-ServiceTypes=Plasma/LookAndFeel
+X-KDE-ParentApp=org.kde.plasmashell
+X-KDE-PluginInfo-Author=ardox
+X-KDE-PluginInfo-License=GPL3.0
+X-KDE-PluginInfo-Name=AxOS
+X-KDE-PluginInfo-Version=1.0
+X-KDE-fallbackPackage=org.kde.breeze.desktop
+X-Plasma-MainScript=defaults
+X-KPackage-Dependencies=kns://colorschemes.knsrc/api.kde-look.org/1851730,kns://plasma-themes.knsrc/api.kde-look.org/1980674,kns://plasma-themes.knsrc/api.kde-look.org/2023421,kns://aurorae.knsrc/api.kde-look.org/2087472,kns://icons.knsrc/api.kde-look.org/2001728,kns://wallpaper.knsrc/api.kde-look.org/2094805,kns://xcursor.knsrc/api.kde-look.org/2083798,kns://plasmoids.knsrc/api.kde-look.org/2094801,kns://plasmoids.knsrc/api.kde-look.org/2094790,kns://plasmoids.knsrc/api.kde-look.org/1181039,kns://plasmoids.knsrc/api.kde-look.org/2048016,kns://wallpaper.knsrc/api.kde-look.org/2099238,kns://wallpaper.knsrc/api.kde-look.org/2104723,kns://sddmtheme.knsrc/api.kde-look.org/2091569,kns://plasmoids.knsrc/api.kde-look.org/2099193,kns://plasmoids.knsrc/api.kde-look.org/2103591,kns://plasmoids.knsrc/api.kde-look.org/2102688,kns://plasmoids.knsrc/api.kde-look.org/2101527,kns://plasmoids.knsrc/api.kde-look.org/2112055,kns://plasmoids.knsrc/api.kde-look.org/2115728,kns://lookandfeel.knsrc/api.kde-look.org/2119778

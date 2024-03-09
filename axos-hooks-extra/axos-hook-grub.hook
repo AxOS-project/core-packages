@@ -1,0 +1,14 @@
+## Copyright (C) 2024 Ardox
+
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = grub*
+Target = grub-*
+Target = grub2-*
+
+[Action]
+Description = Fixing naming for grub entries...
+When = PostTransaction
+Exec = /usr/bin/axos-hooks-extra fix-grub
