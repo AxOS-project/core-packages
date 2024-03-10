@@ -7,7 +7,7 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 RightButton;NoModifier=org.kde.contextmenu
 
 [Containments][1]
-wallpaper=org.kde.image:/usr/share/backgrounds/axos/axos.png
+wallpaper=org.kde.image:/usr/share/backgrounds/axos/AxOS.png
 wallpaperposition=1
 wallpapertype=1
 
