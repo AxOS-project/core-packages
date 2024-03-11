@@ -6,18 +6,13 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][1]
-wallpaper=org.kde.image:/usr/share/backgrounds/axos/AxOS.png
-wallpaperposition=1
-wallpapertype=1
-
-
 [Containments][43][Applets][44][Configuration][General]
 systemFavorites=suspend\\\\\\,hibernate\\\\\\,reboot\\\\\\,shutdown
 
 [Containments][63]
+ItemGeometries-1536x864=
 ItemGeometries-1920x1080=Applet-80:656,368,624,240,0;
-ItemGeometriesHorizontal=Applet-80:656,368,624,240,0;
+ItemGeometriesHorizontal=
 activityId=b88f0a66-382f-419d-a744-6639ba1daaa1
 formfactor=0
 immutability=1
@@ -26,13 +21,19 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][63][Applets][80]
-immutability=1
-plugin=org.kde.plasma.Deskclock
+[Containments][63][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][63][General]
 ToolBoxButtonState=topcenter
-ToolBoxButtonX=280
+ToolBoxButtonX=331
+positions={"1920x1080":[]\\,"1536x864":[]}
+
+[Containments][63][Wallpaper][org.kde.image][General]
+Image=/usr/share/backgrounds/axos/AxOS.png
+PreviewImage=/usr/share/backgrounds/axos/AxOS.png
+SlidePaths=/usr/share/wallpapers/
 
 [Containments][64]
 activityId=
@@ -47,24 +48,6 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.plasma.panelspacer
 
-[Containments][64][Applets][66]
-immutability=1
-plugin=AndromedaLauncher
-
-[Containments][64][Applets][66][Configuration]
-PreloadWeight=100
-
-[Containments][64][Applets][66][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][64][Applets][66][Configuration][General]
-activationIndicator=false
-customButtonImage=/usr/share/pixmaps/AxOS-logo.png
-floating=true
-launcherPosition=1
-useCustomButtonImage=true
-
 [Containments][64][Applets][68]
 immutability=1
 plugin=org.kde.plasma.icontasks
@@ -72,10 +55,14 @@ plugin=org.kde.plasma.icontasks
 [Containments][64][Applets][68][Configuration]
 launchers=
 
+[Containments][64][Applets][68][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [Containments][64][Applets][68][Configuration][General]
-iconSpacing=0
 indicateAudioStreams=false
 launchers=applications:org.kde.dolphin.desktop,applications:firefox.desktop,applications:org.kde.konsole.desktop,applications:systemsettings.desktop
+maxStripes=1
 
 [Containments][64][Applets][69]
 immutability=1
@@ -86,7 +73,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][64][Applets][70][Configuration]
-PreloadWeight=95
+PreloadWeight=100
 SystrayContainmentId=71
 
 [Containments][64][Applets][78]
@@ -94,13 +81,14 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][64][Applets][78][Configuration]
-PreloadWeight=55
+PreloadWeight=100
 popupHeight=450
 popupWidth=396
 
 [Containments][64][Applets][78][Configuration][Appearance]
 autoFontAndSize=false
 fontSize=11
+fontWeight=400
 showDate=false
 
 [Containments][64][Applets][78][Configuration][ConfigDialog]
@@ -112,16 +100,34 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][64][Applets][79][Configuration]
-PreloadWeight=85
+PreloadWeight=100
 popupHeight=432
 popupWidth=324
+
+[Containments][64][Applets][95]
+immutability=1
+plugin=org.kde.plasma.kickoff
+
+[Containments][64][Applets][95][Configuration]
+PreloadWeight=100
+popupHeight=506
+popupWidth=683
+
+[Containments][64][Applets][95][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][64][Applets][95][Configuration][General]
+favoritesPortedToKAstats=true
+icon=/usr/share/pixmaps/axos.svg
+systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
 [Containments][64][ConfigDialog]
 DialogHeight=84
 DialogWidth=1920
 
 [Containments][64][General]
-AppletOrder=65;66;68;69;70;78;79
+AppletOrder=65;95;68;69;70;78;79
 
 [Containments][71]
 activityId=
@@ -152,44 +158,85 @@ PreloadWeight=42
 [Containments][71][Applets][77][Configuration]
 PreloadWeight=42
 
-[Containments][71][Applets][81]
-immutability=1
-plugin=org.kde.plasma.battery
-
-[Containments][71][Applets][81][Configuration]
-PreloadWeight=55
-
 [Containments][71][Applets][82]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][71][Applets][82][Configuration]
-PreloadWeight=60
+PreloadWeight=100
 
-[Containments][71][Applets][83]
+[Containments][71][Applets][86]
 immutability=1
-plugin=org.kde.plasma.clipboard
+plugin=org.kde.plasma.volume
 
-[Containments][71][Applets][83][Configuration]
-PreloadWeight=55
+[Containments][71][Applets][86][Configuration]
+PreloadWeight=90
 
-[Containments][71][Applets][84]
+[Containments][71][Applets][86][Configuration][General]
+migrated=true
+
+[Containments][71][Applets][88]
 immutability=1
-plugin=org.kde.plasma.mediacontroller
+plugin=org.kde.plasma.keyboardindicator
 
-[Containments][71][Applets][84][Configuration]
-PreloadWeight=52
+[Containments][71][Applets][89]
+immutability=1
+plugin=org.kde.plasma.devicenotifier
+
+[Containments][71][Applets][89][Configuration]
+PreloadWeight=80
+
+[Containments][71][Applets][90]
+immutability=1
+plugin=org.kde.plasma.nightcolorcontrol
+
+[Containments][71][Applets][94]
+immutability=1
+plugin=org.kde.plasma.brightness
+
+[Containments][71][Applets][94][Configuration]
+PreloadWeight=0
+
+[Containments][71][Applets][97]
+immutability=1
+plugin=org.kde.plasma.diskquota
+
+[Containments][71][Applets][97][Configuration]
+PreloadWeight=70
+
+[Containments][71][Applets][97][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][71][Applets][98]
+immutability=1
+plugin=org.kde.plasma.cameraindicator
+
+[Containments][71][Applets][99]
+immutability=1
+plugin=org.kde.plasma.weather
+
+[Containments][71][Applets][99][Configuration]
+PreloadWeight=0
+configMigrated=true
+
+[Containments][71][Applets][99][Configuration][Units]
+pressureUnit=5008
+speedUnit=9000
+temperatureUnit=6001
+visibilityUnit=2007
 
 [Containments][71][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
 [Containments][71][General]
-extraItems=org.kde.plasma.battery,org.kde.plasma.mediacontroller,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard
+extraItems=org.kde.plasma.battery,org.kde.plasma.mediacontroller,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.weather,org.kde.plasma.diskquota
+hiddenItems=org.kde.kdeconnect,org.kde.plasma.brightness,org.kde.plasma.weather,org.kde.plasma.diskquota
 iconSpacing=1
-knownItems=org.kde.plasma.battery,org.kde.plasma.mediacontroller,org.kde.kdeconnect,org.kde.plasma.manage-inputmethod,org.kde.plasma.devicenotifier,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.keyboardlayout
-shownItems=org.kde.plasma.mediacontroller,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.weather,org.kde.plasma.battery,org.kde.plasma.clipboard
+knownItems=org.kde.plasma.battery,org.kde.plasma.mediacontroller,org.kde.kdeconnect,org.kde.plasma.manage-inputmethod,org.kde.plasma.devicenotifier,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.brightness,org.kde.plasma.cameraindicator
+shownItems=org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.battery
 
 [ScreenMapping]
-itemsOnDisabledScreens=
-screenMapping=desktop:/Downloads,0,b88f0a66-382f-419d-a744-6639ba1daaa1,desktop:/node_modules,0,b88f0a66-382f-419d-a744-6639ba1daaa1,desktop:/Videos,0,b88f0a66-382f-419d-a744-6639ba1daaa1,desktop:/Arduino,0,b88f0a66-382f-419d-a744-6639ba1daaa1,desktop:/Images,0,b88f0a66-382f-419d-a744-6639ba1daaa1,desktop:/filebrowser.db,0,b88f0a66-382f-419d-a744-6639ba1daaa1,desktop:/Documents,0,b88f0a66-382f-419d-a744-6639ba1daaa1
+itemsOnDisabledScreens=0,b88f0a66-382f-419d-a744-6639ba1daaa1,10,desktop:/AxOS_blanc.png,desktop:/filebrowser.db,desktop:/wallpaper.jpg,desktop:/Arduino,desktop:/Videos,desktop:/Bureau,desktop:/Downloads,desktop:/node_modules,desktop:/Documents,desktop:/Images
+screenMapping=

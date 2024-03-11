@@ -2,10 +2,10 @@
 # using fakeroot version 1.34
 pkgname = axskel
 pkgbase = axskel
-pkgver = 1.4-1
+pkgver = 1.5-1
 pkgdesc = skel configs and looks for AxOS
 url = 
-builddate = 1710062283
+builddate = 1710174696
 packager = Unknown Packager
-size = 21218021
+size = 20574306
 arch = x86_64
