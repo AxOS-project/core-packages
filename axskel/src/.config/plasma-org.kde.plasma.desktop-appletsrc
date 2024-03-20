@@ -33,7 +33,7 @@ positions={"1920x1080":[]\\,"1536x864":[]}
 [Containments][63][Wallpaper][org.kde.image][General]
 Image=/usr/share/backgrounds/axos/AxOS.png
 PreviewImage=/usr/share/backgrounds/axos/AxOS.png
-SlidePaths=/usr/share/wallpapers/
+SlidePaths=/usr/share/backgrounds/,/usr/share/wallpapers/
 
 [Containments][64]
 activityId=
@@ -54,10 +54,6 @@ plugin=org.kde.plasma.icontasks
 
 [Containments][64][Applets][68][Configuration]
 launchers=
-
-[Containments][64][Applets][68][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
 
 [Containments][64][Applets][68][Configuration][General]
 indicateAudioStreams=false
@@ -235,8 +231,4 @@ extraItems=org.kde.plasma.battery,org.kde.plasma.mediacontroller,org.kde.kdeconn
 hiddenItems=org.kde.kdeconnect,org.kde.plasma.brightness,org.kde.plasma.weather,org.kde.plasma.diskquota
 iconSpacing=1
 knownItems=org.kde.plasma.battery,org.kde.plasma.mediacontroller,org.kde.kdeconnect,org.kde.plasma.manage-inputmethod,org.kde.plasma.devicenotifier,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.brightness,org.kde.plasma.cameraindicator
-shownItems=org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.battery
-
-[ScreenMapping]
-itemsOnDisabledScreens=0,b88f0a66-382f-419d-a744-6639ba1daaa1,10,desktop:/AxOS_blanc.png,desktop:/filebrowser.db,desktop:/wallpaper.jpg,desktop:/Arduino,desktop:/Videos,desktop:/Bureau,desktop:/Downloads,desktop:/node_modules,desktop:/Documents,desktop:/Images
-screenMapping=
+shownItems=org.kde.plasma.volume,org.kde.plasma.networkmanagement

@@ -113,7 +113,7 @@ ColorSchemeHash=4fce135d12eb45a4eb0af4fb6dab69aed426a773
 accentColorFromWallpaper=true
 
 [Icons]
-Theme=Papirus-Light
+Theme=Papirus-Dark
 
 [KDE]
 LookAndFeelPackage=AxOS

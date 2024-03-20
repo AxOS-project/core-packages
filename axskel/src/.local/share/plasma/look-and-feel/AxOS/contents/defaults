@@ -2,10 +2,10 @@
 ColorScheme=Deepin2022Dark
 
 [kdeglobals][Icons]
-Theme=YaruPlasma-Dark
+Theme=Papirus-Dark
 
 [plasmarc][Theme]
-name=Frosted
+name=AxOS
 
 [Wallpaper]
 Image=AxOS
@@ -15,6 +15,3 @@ ButtonsOnLeft=XAI
 ButtonsOnRight=
 library=org.kde.kwin.aurorae
 theme=__aurorae__svg__Apple-Aurora-AbsoluteDark
-
-[kcminputrc][Mouse]
-cursorTheme=Apple-cursors

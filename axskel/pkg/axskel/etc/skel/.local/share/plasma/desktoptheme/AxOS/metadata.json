@@ -1,0 +1,20 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "AxOS",
+                "Email": "lvardox@proton.me"
+            }
+        ],
+        "Name": "AxOS",
+        "Description": "Brings a very dynamic electrical energy atmosphere to the desktop",
+        "Id": "AxOS",
+        "Version": "1.0",
+        "Category": "",
+        "EnabledByDefault": true,
+        "License": "GPL",
+        "Website": ""
+    },
+    "X-Plasma-API": "6.0"
+}
+
