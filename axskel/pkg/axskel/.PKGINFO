@@ -3,10 +3,10 @@
 pkgname = axskel
 pkgbase = axskel
 xdata = pkgtype=pkg
-pkgver = 1.6.3-1
+pkgver = 1.6.4-1
 pkgdesc = skel configs and looks for AxOS
 url = 
-builddate = 1711033389
+builddate = 1711039868
 packager = Unknown Packager
-size = 5642481
+size = 5663943
 arch = x86_64

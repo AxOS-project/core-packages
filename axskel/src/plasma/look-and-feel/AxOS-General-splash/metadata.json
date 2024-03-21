@@ -1,5 +1,5 @@
 {
-    "KPackageStructure": "Plasma/LookAndFeel/Splash",
+    "KPackageStructure": "Plasma/LookAndFeel",
     "KPlugin": {
         "Authors": [
             {
@@ -8,10 +8,11 @@
             }
         ],
         "Category": "",
-        "Description": "AxOS Splashscreen For Plasma 6",
+        "Description": "AxOS Splashscreen for Plasma 6",
         "Id": "AxOS",
         "License": "GPLv3",
         "Name": "AxOS",
+        "Website": ""
     },
     "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
     "X-Plasma-APIVersion": "2"
