@@ -1,11 +1,11 @@
 format = 2
 pkgname = axskel
 pkgbase = axskel
-pkgver = 1.6.2-1
+pkgver = 1.6.3-1
 pkgarch = x86_64
-pkgbuild_sha256sum = 5198e40adf7b2451ac6aba743e9b1a1f46b917c73afeaef7de417ba0a0eabe90
+pkgbuild_sha256sum = 3984a6c4dd4f29b9e6a5aa393860149eab282f612bd972bd6279cc48e61cc62e
 packager = Unknown Packager
-builddate = 1711023534
+builddate = 1711033389
 builddir = /home/ardox/Documents/Mirrors/local-axos/pkgs/core-packages/axskel
 startdir = /home/ardox/Documents/Mirrors/local-axos/pkgs/core-packages/axskel
 buildtool = makepkg
