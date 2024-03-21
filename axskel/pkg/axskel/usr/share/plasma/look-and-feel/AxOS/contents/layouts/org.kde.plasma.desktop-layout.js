@@ -2,7 +2,7 @@ var plasma = getApiVersion(1);
 /*General*/
 panelbottom = new Panel
 panelbottom.location = "bottom"
-panelbottom.height = 52
+panelbottom.height = 51
 panelbottom.hiding = "none"
 /*spacer*/
 panelbottom.addWidget("org.kde.plasma.panelspacer")
