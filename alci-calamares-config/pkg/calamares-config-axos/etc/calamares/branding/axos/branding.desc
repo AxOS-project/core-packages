@@ -127,7 +127,7 @@ strings:
     shortVersion:        24.03
     versionedName:       AxOS
     shortVersionedName:  AxOS
-    bootloaderEntryName: Arch
+    bootloaderEntryName: AxOS
 
 # These images are loaded from the branding module directory.
 #

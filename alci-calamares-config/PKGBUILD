@@ -1,6 +1,6 @@
 pkgname="calamares-config-axos"
-pkgver="3.2"
-pkgrel="3"
+pkgver="3.3"
+pkgrel="1"
 pkgdesc="axos calamares config"
 arch=("x86_64")
 
