@@ -12,15 +12,15 @@ fa6be5b2b297b569d890535b0126054789f8a6fb refs/heads/coreutils-8.9
 6465ba8523b1c434164303f98aacae946827ba6c refs/heads/haible-private
 7b662fb69a5a65026801a04151090bdd61250196 refs/heads/karl
 6ee66df7d470e6ae8fcd99a6a1ace9d003edf904 refs/heads/lexbind
-d15237a22b4337843991e1dc5a6677f6f9da3b55 refs/heads/master
+1734b827208fb3695c88812c57359dbccd5d6e52 refs/heads/master
 692e80d36f3d6aea3e812600815c97389d6bc4fb refs/heads/origin
 6ce7367385f1380b702aea0da5828ac3ea34795b refs/heads/pygnulib
 eef2b8c058c65251e76410bd339acc11d1917eeb refs/heads/python
 39da61d3c3fb1774295705295c72d73a53dce9b1 refs/heads/stable-202201
 3198293e3fd04182f457cb76ff8c5b4ac1155103 refs/heads/stable-202207
 20932856a6a07f056918d58acd09cea4ba150a52 refs/heads/stable-202301
-f95c23370c4acca67e7d2bc3013d454ac79eee69 refs/heads/stable-202307
-c99c8d491850dc3a6e0b8604a2729d8bc5c0eff1 refs/heads/stable-202401
+0770dc765c6f2fc66ae655f8b0228778e7121283 refs/heads/stable-202307
+b922a9bcb56636fae8a394ea5042cdbfb5bbf1aa refs/heads/stable-202401
 10c1e9dc30730133dbb631c9be0a4e84ce0b0eaa refs/heads/topic/libposix
 ed0bf5d5284b787af71b1b95fca1fdb6389fee3c refs/heads/ueno/unicode-9.0.0
 4b0486462349543ec3df6ec9759080e305ea252b refs/tags/CPPI-1_10
@@ -349,5 +349,7 @@ d11be07eab194fc5e039c8d14eb423207409ff27 refs/tags/v0.0
 ^d5daff19f4a26e67e7c410cefa9ddc13e036162a
 103fa89a6c26c762ccd006d26703fa7874adbdd6 refs/tags/v0.1
 ^233419c39c6d13d84439b95766328a238ffb6518
+2af32bcc0abb63514405acbe0def3d184b6cc951 refs/tags/v1.0
+^d4ec02b3cc70cddaaa5183cc5a45814e0afb2292
 b06578954912a7dcfbe0c6f6efca230b04ad0e7f refs/tags/version-3_4_2-to-fsf
 43832d5afe3030701e2ab59b5ad6a32a359419ea refs/tags/version-3_4_4-tentative

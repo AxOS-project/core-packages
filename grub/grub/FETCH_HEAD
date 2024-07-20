@@ -2,7 +2,7 @@ e897f83635a9a8cc6824ae8c9b473f6773389224	not-for-merge	branch 'andrey/ext4_inlin
 3bf4907004ad25addadaf735f7480a5e3b860a3f	not-for-merge	branch 'arm_coreboot' of https://git.savannah.gnu.org/git/grub
 125f436763c3824fab0c2b33d48382fd9a484b84	not-for-merge	branch 'grub-legacy' of https://git.savannah.gnu.org/git/grub
 ebd289335a58e7f27b6bb1e60ee5180eace7290f	not-for-merge	branch 'leiflindholm/arm64' of https://git.savannah.gnu.org/git/grub
-04d2a50f31c4f29a451b507aefe02bf0798b534b	not-for-merge	branch 'master' of https://git.savannah.gnu.org/git/grub
+56e58828cf3cd32ba4768779accc6655120c3136	not-for-merge	branch 'master' of https://git.savannah.gnu.org/git/grub
 206676601eb853fc319df14cd3398fbdfde665ac	not-for-merge	branch 'master-bad-anon-commit' of https://git.savannah.gnu.org/git/grub
 45f169e63d9cda57840e057c365656c29b81aab2	not-for-merge	branch 'multiboot' of https://git.savannah.gnu.org/git/grub
 e29a99ac3bbf2481be9a5c7d985539b60900fcac	not-for-merge	branch 'multiboot2' of https://git.savannah.gnu.org/git/grub
