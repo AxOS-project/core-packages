@@ -1,9 +1,9 @@
 # Maintainer: Ardox
 
 pkgname="axos-hooks"
-pkgver=3.0
-pkgrel=1
-pkgdesc='Pacman hooks for AxOS filesystem'
+pkgver=3.4
+pkgrel=2
+pkgdesc='Hooks for AxOS filesystem'
 arch=('x86_64')
 license=('GPL3')
 source=(
@@ -17,20 +17,21 @@ source=(
 		'axos.svg'
 		'axos-logo.png'
 		'axos-logo.svg'
+		'axos-reload-theme'
 )
 
 sha256sums=('11c4a66c56620a0c0862cf4554119ebc89d4fab96f9fab329100253435fc6b71'
             '2f776f24b7cd540ba47e14bff4f89505270a11038c54c8362b396f5855cc5eb7'
             'cafa8c21eb2c4619d623d9edd596c7feb23c8f30323b505dc88dc7954f96fc3f'
             'ab3a587c875b5aa8ea8d1482744a8be2f6f6b9dc23f2cd1e15416597f04e5c60'
-            '85077c765740416eee9bc09c616599a7a2640d8f191dfd70938d5139b5a543e1'
+            '8359f50a502eb7eacc10efd819fdf1884eed9d65188af55ef2fe122a82ec41ef'
             'a0a15afdc15155e3590b57995631ebb5b6e49f96d138f710d0d52c07c945c787'
             '22f2eff360ef6f68f9af2ae709345299a147233123a7f90d34e1e03e29bef628'
             '81eecdabee81aa907275a1faa95e41c704eefab9059a8a522775378d125760dd'
             '933eb942ed6e266f93243463a6a1cc811d9c5ccdc48fa89847fe775961a99279'
-            '81eecdabee81aa907275a1faa95e41c704eefab9059a8a522775378d125760dd')
-
-
+            '81eecdabee81aa907275a1faa95e41c704eefab9059a8a522775378d125760dd'
+            '2ccd03026b1eab87100b1fccab6b5f9316f866d9fd91f1a1cc7e0b065b163007')
+            
 package() {
 	local hooks="$pkgdir"/usr/share/libalpm/hooks
 	local pixmaps="$pkgdir"/usr/share/pixmaps

@@ -11,7 +11,7 @@ fix_lsb_release() {
     fi
     sed -i "$file" \
         -e 's|^DISTRIB_ID=.*$|DISTRIB_ID=axos|' \
-        -e 's|^DISTRIB_RELEASE=.*$|DISTRIB_RELEASE=rolling|' \
+        -e 's|^DISTRIB_RELEASE=.*$|DISTRIB_RELEASE=24.05|' \
         -e 's|^DISTRIB_DESCRIPTION=.*$|DISTRIB_DESCRIPTION=\"AxOS\"|'
 }
 
@@ -22,13 +22,14 @@ fix_os_release() {
         -e 's|^NAME=.*$|NAME=\"AxOS\"|' \
         -e 's|^PRETTY_NAME=.*$|PRETTY_NAME=\"AxOS\"|' \
         -e 's|^ID=.*$|ID=axos|' \
-        -e 's|^ID_LIKE=.*$|ID_LIKE=arch|' \
+        -e 's|^ID_LIKE=.*$|ID_LIKE=axos|' \
         -e 's|^BUILD_ID=.*$|BUILD_ID=rolling|' \
-        -e 's|^HOME_URL=.*$|HOME_URL=\"https://axos-project.github.io\"|' \
+        -e 's|^HOME_URL=.*$|HOME_URL=\"https://www.axos-project.com\"|' \
         -e 's|^DOCUMENTATION_URL=.*$|DOCUMENTATION_URL=\"https://axos-1.gitbook.io/\"|' \
         -e 's|^SUPPORT_URL=.*$|SUPPORT_URL=\"https://github.com/AxOS-project/AxOS/issues\"|' \
         -e 's|^BUG_REPORT_URL=.*$|BUG_REPORT_URL=\"https://github.com/AxOS-project/AxOS/issues\"|' \
-        -e 's|^LOGO=.*$|LOGO=axos|'
+        -e 's|^LOGO=.*$|LOGO=axos|' \
+        -e '$a\VERSION=24.08'
 
     if [ -z "$(grep "^ID_LIKE=" $file)" ] && [ -n "$(grep "^ID=" $file)" ] ; then
         # add missing ID_LIKE=
@@ -39,6 +40,10 @@ fix_os_release() {
     sed -i 's|Arch Linux|AxOS|g' /etc/issue /usr/share/factory/etc/issue
 }
 
+reload_theme() {
+	pacman -Sy axskel
+	cp -r /etc/skel/.* $HOME/
+}
 
 main() {
     local hookname="$1"
@@ -46,6 +51,7 @@ main() {
     case "$hookname" in
         os-release)  fix_os_release ;;
         lsb-release) fix_lsb_release ;;
+	reload-theme) reload_theme ;;
         "")          fix_os_release
                      fix_lsb_release
                      ;;
