@@ -1,0 +1,38 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "zayronxio@gmail.com",
+                "Name": "zayronxio"
+            }
+        ],
+        "Category": "",
+        "ServiceTypes": [
+            "Plasma/LookAndFeel"
+        ],
+        "Description": "",
+        "Id": "Deepin.Next.Dark.Plasma6",
+        "License": "GPLv3+",
+        "Name": "Deepin-Next-Dark",
+        "Website": ""
+        },
+        "X-KPackage-Dependencies": [
+        "kns://colorschemes.knsrc/api.kde-look.org/1851730",
+        "kns://plasma-themes.knsrc/api.kde-look.org/1990227",
+        "kns://plasma-themes.knsrc/api.kde-look.org/1980674",
+        "kns://xcursor.knsrc/api.kde-look.org/2083798",
+        "kns://icons.knsrc/api.kde-look.org/1678986",
+        "kns://icons.knsrc/api.kde-look.org/1990795",
+        "kns://wallpaper.knsrc/api.kde-look.org/1861470",
+        "kns://plasmoids.knsrc/api.kde-look.org/2137418",
+        "kns://plasmoids.knsrc/api.kde-look.org/2161461",
+        "kns://plasmoids.knsrc/api.kde-look.org/2139890",
+        "kns://plasmoids.knsrc/api.kde-look.org/2179833",
+        "kns://plasmoids.knsrc/api.kde-look.org/2136321",
+        "kns://plasmoids.knsrc/api.kde-look.org/2141133",
+        "kns://aurorae.knsrc/api.kde-look.org/1415016",
+        "kns://wallpaper.knsrc/api.kde-look.org/2079222",
+        "kns://wallpaper.knsrc/api.kde-look.org/2113274"
+         ]
+         }
