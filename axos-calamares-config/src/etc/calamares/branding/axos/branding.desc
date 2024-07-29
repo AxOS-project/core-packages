@@ -123,8 +123,8 @@ navigation: widget
 strings:
     productName:         AxOS
     shortProductName:    AxOS
-    version:             24.03
-    shortVersion:        24.03
+    version:             24.08
+    shortVersion:        24.08
     versionedName:       AxOS
     shortVersionedName:  AxOS
     bootloaderEntryName: AxOS
