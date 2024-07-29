@@ -47,7 +47,7 @@ reload_theme() {
 
 ps1_replace() {
 	local file=/etc/skel/.bashrc
-	sed -i 's/^PS1=.*$/PS1=" \[\e[00;34m\]λ \W \e[0m\]""/' $file
+	sudo sed -i 's/^PS1=.*$/PS1="\[\e[00;34m\]λ \W \e[0m\]"/' $file
 	cp $file $HOME
 }
 
