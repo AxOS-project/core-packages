@@ -45,6 +45,12 @@ reload_theme() {
 	cp -r /etc/skel/.* $HOME/
 }
 
+ps1_replace() {
+	local file=/etc/skel/.bashrc
+	sed -i 's/^PS1=.*$/PS1=" \[\e[00;34m\]λ \W \e[0m\]""/' $file
+	cp $file $HOME
+}
+
 main() {
     local hookname="$1"
 
@@ -52,8 +58,10 @@ main() {
         os-release)  fix_os_release ;;
         lsb-release) fix_lsb_release ;;
 	reload-theme) reload_theme ;;
+	bash-prompt-replace) ps1_replace;;
         "")          fix_os_release
                      fix_lsb_release
+                     ps1_replace
                      ;;
     esac
 }
