@@ -24,7 +24,7 @@ fix_os_release() {
         -e 's|^ID=.*$|ID=axos|' \
         -e 's|^ID_LIKE=.*$|ID_LIKE=axos|' \
         -e 's|^BUILD_ID=.*$|BUILD_ID=rolling|' \
-        -e 's|^HOME_URL=.*$|HOME_URL=\"https://www.axos-project.com\"|' \
+        -e 's|^HOME_URL=.*$|HOME_URL=\"http://www.axos-project.com\"|' \
         -e 's|^DOCUMENTATION_URL=.*$|DOCUMENTATION_URL=\"https://axos-1.gitbook.io/\"|' \
         -e 's|^SUPPORT_URL=.*$|SUPPORT_URL=\"https://github.com/AxOS-project/AxOS/issues\"|' \
         -e 's|^BUG_REPORT_URL=.*$|BUG_REPORT_URL=\"https://github.com/AxOS-project/AxOS/issues\"|' \
@@ -33,7 +33,7 @@ fix_os_release() {
 
     if [ -z "$(grep "^ID_LIKE=" $file)" ] && [ -n "$(grep "^ID=" $file)" ] ; then
         # add missing ID_LIKE=
-        sed -i $file -e '/^ID=/a \ID_LIKE=arch'
+        sed -i $file -e '/^ID=/a \ID_LIKE=axos'
     fi
 
 	# fix issue file
@@ -41,8 +41,10 @@ fix_os_release() {
 }
 
 reload_theme() {
-	pacman -Sy axskel
-	cp -r /etc/skel/.* $HOME/
+	pacman -Sy axskel --noconfirm
+	cp -r /etc/skel/.local $HOME/
+    cp -r /etc/skel/.config $HOME/
+    cp -r /etc/skel/.bashrc $HOME/
 }
 
 ps1_replace() {
@@ -57,22 +59,27 @@ main() {
     case "$hookname" in
         os-release)  fix_os_release ;;
         lsb-release) fix_lsb_release ;;
-	reload-theme) reload_theme ;;
-	bash-prompt-replace) ps1_replace;;
-        "")          fix_os_release
+        reload-theme) reload_theme ;;
+        bash-prompt-replace) ps1_replace;;
+        full)        fix_os_release
                      fix_lsb_release
                      ps1_replace
+                     reload_theme
                      ;;
-	*) echo "AxOS hooks runner"
+
+	*)  echo "AxOS hooks runner"
+        echo "This script is used to update parts of the AxOS system."
 		echo "Usage: axos-hooks-runner <hook name>"
 		echo ""
+        echo ""
 		echo "Avaiable hooks:"
-		echo "	 os-release: replace the content of /etc/os-release with the latest content"
-		echo "	 lsb-release: same as os-release but for /etc/lsb-release"
-		echo "	 reload-theme: reload the users theme and config with the latest AxOS look (avaiable only after axskel update)"
-		echo "	 bash-prompt-replace: Replace the bash prompt of the user with 'λ ~'."
+        echo ""
+		echo "	 os-release:-------------------- replace the content of /etc/os-release with the latest content"
+		echo "	 lsb-release:------------------- same as os-release but for /etc/lsb-release"
+		echo "	 reload-theme:------------------ reload the users theme and config with the latest AxOS look (avaiable only after axskel update)"
+		echo "	 bash-prompt-replace:----------- Replace the bash prompt of the user with 'λ ~'."
+        echo "   full:-------------------------- Do Everything"
 		echo ""
-		echo "Leave blank to execute os-release, lsb-release and bash-prompt-replace."
 		echo "WARNING: DO NOT EXECUTE UNLESS YOU KNOW WHAT YOU ARE DOING"
 		;;
     esac

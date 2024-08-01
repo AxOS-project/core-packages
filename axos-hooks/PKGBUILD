@@ -1,7 +1,7 @@
 # Maintainer: Ardox
 
 pkgname="axos-hooks"
-pkgver=3.6
+pkgver=3.7
 pkgrel=1
 pkgdesc='Hooks for AxOS filesystem'
 arch=('x86_64')
@@ -17,20 +17,20 @@ source=(
 		'axos.svg'
 		'axos-logo.png'
 		'axos-logo.svg'
-		'axos-reload-theme'
+		'axos-full-update'
 )
 
-sha256sums=('11c4a66c56620a0c0862cf4554119ebc89d4fab96f9fab329100253435fc6b71'
-            '2f776f24b7cd540ba47e14bff4f89505270a11038c54c8362b396f5855cc5eb7'
+sha256sums=('b375a7b3669cc3807ee8ce1f3db52de0421bf58d0cc1af2db2ad549abe54f20b'
+            'd5a418811752d03bdd84eb55204abfe55ed32da5ea2c523ec90fab5c2f8447fe'
             'cafa8c21eb2c4619d623d9edd596c7feb23c8f30323b505dc88dc7954f96fc3f'
-            'ab3a587c875b5aa8ea8d1482744a8be2f6f6b9dc23f2cd1e15416597f04e5c60'
-            'df7b614f5e3e944dd9996bfe2593add5def993841136b704b24a4c817984c5a8'
-            'a0a15afdc15155e3590b57995631ebb5b6e49f96d138f710d0d52c07c945c787'
+            'a47d75cf4d422bd8780aac566bb6fc7a827f2af3ecd8bfdbab5804d73b895a02'
+            'fc6ad05c021595a907452f7518794a89cbca35ad4dd138e3481df812f2c913ec'
+            'c069eacd2fb09b6d648dea897bc4de4f8f26c9cf04ddfdd5d39019b13eafcd21'
             '22f2eff360ef6f68f9af2ae709345299a147233123a7f90d34e1e03e29bef628'
             '81eecdabee81aa907275a1faa95e41c704eefab9059a8a522775378d125760dd'
             '933eb942ed6e266f93243463a6a1cc811d9c5ccdc48fa89847fe775961a99279'
             '81eecdabee81aa907275a1faa95e41c704eefab9059a8a522775378d125760dd'
-            '2ccd03026b1eab87100b1fccab6b5f9316f866d9fd91f1a1cc7e0b065b163007')
+            '65e2644d734dfafc8a26cb2033abf596692830b0d71336516c667b131c01ef21')
             
 package() {
 	local hooks="$pkgdir"/usr/share/libalpm/hooks
@@ -44,6 +44,7 @@ package() {
 			    
 	install -Dm 755 axos-hooks-runner         	"$bin"/axos-hooks-runner
 	install -Dm 755 axos-reboot-required       "$bin"/axos-reboot-required
+	install -Dm 755 axos-full-update 			"$bin"/axos-full-update
 			    
 	install -Dm 644 axos.png       			"$pixmaps"/axos.png
 	install -Dm 644 axos.svg       			"$pixmaps"/axos.svg
