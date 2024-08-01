@@ -12,9 +12,6 @@ HOME_DIR="$HOME"
 # Set the directory to compare against
 SKEL_DIR="/etc/skel"
 
-# Check for differences
-diff_output=$(diff -r "$SKEL_DIR" "$HOME_DIR")
-
 start_update() {
     # Update already installed axos packages
     pacman -Sy --noconfirm --needed $(comm -12 <(pacman -Slq customrepo | sort) <(pacman -Qq | sort))
