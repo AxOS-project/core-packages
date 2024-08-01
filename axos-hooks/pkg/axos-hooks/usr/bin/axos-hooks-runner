@@ -47,7 +47,7 @@ reload_theme() {
 
 ps1_replace() {
 	local file=/etc/skel/.bashrc
-	sudo sed -i 's/^PS1=.*$/PS1="\[\e[00;34m\]λ \W \e[0m\]"/' $file
+	echo 'PS1="\[\e[00;34m\]λ \W \[\e[0m\] "' | tee $file > /dev/null
 	cp $file $HOME
 }
 
@@ -63,6 +63,18 @@ main() {
                      fix_lsb_release
                      ps1_replace
                      ;;
+	*) echo "AxOS hooks runner"
+		echo "Usage: axos-hooks-runner <hook name>"
+		echo ""
+		echo "Avaiable hooks:"
+		echo "	 os-release: replace the content of /etc/os-release with the latest content"
+		echo "	 lsb-release: same as os-release but for /etc/lsb-release"
+		echo "	 reload-theme: reload the users theme and config with the latest AxOS look (avaiable only after axskel update)"
+		echo "	 bash-prompt-replace: Replace the bash prompt of the user with 'λ ~'."
+		echo ""
+		echo "Leave blank to execute os-release, lsb-release and bash-prompt-replace."
+		echo "WARNING: DO NOT EXECUTE UNLESS YOU KNOW WHAT YOU ARE DOING"
+		;;
     esac
 }
 

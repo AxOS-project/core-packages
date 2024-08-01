@@ -1,11 +1,11 @@
 format = 2
 pkgname = axos-hooks
 pkgbase = axos-hooks
-pkgver = 3.5-2
+pkgver = 3.6-1
 pkgarch = x86_64
-pkgbuild_sha256sum = a668d41b9dae6f8361c68c74dc10acb0245324e276baddb7b026afbf94ea7d6d
+pkgbuild_sha256sum = c5ade0fa140e0d415c91a12baa49c0e85fdacf7a4b5654e474c92f7bcad5754d
 packager = Unknown Packager
-builddate = 1722286501
+builddate = 1722330881
 builddir = /home/ardox/Documents/core-packages/axos-hooks
 startdir = /home/ardox/Documents/core-packages/axos-hooks
 buildtool = makepkg
