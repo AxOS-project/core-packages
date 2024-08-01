@@ -14,7 +14,7 @@ SKEL_DIR="/etc/skel"
 
 start_update() {
     # Update already installed axos packages
-    pacman -Sy --noconfirm --needed $(comm -12 <(pacman -Slq customrepo | sort) <(pacman -Qq | sort))
+    pacman -Sy --noconfirm --needed $(comm -12 <(pacman -Slq axos | sort) <(pacman -Qq | sort))
     cp -r -u -p "$SKEL_DIR"/.local "$HOME_DIR"
     cp -r -u -p "$SKEL_DIR"/.config "$HOME_DIR"
     cp -r -u -p "$SKEL_DIR"/.bashrc "$HOME_DIR"

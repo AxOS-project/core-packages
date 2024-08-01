@@ -2,7 +2,7 @@
 
 pkgname="axos-hooks"
 pkgver=3.7
-pkgrel=2
+pkgrel=3
 pkgdesc='Hooks for AxOS filesystem'
 arch=('x86_64')
 license=('GPL3')
@@ -30,7 +30,7 @@ sha256sums=('b375a7b3669cc3807ee8ce1f3db52de0421bf58d0cc1af2db2ad549abe54f20b'
             '81eecdabee81aa907275a1faa95e41c704eefab9059a8a522775378d125760dd'
             '933eb942ed6e266f93243463a6a1cc811d9c5ccdc48fa89847fe775961a99279'
             '81eecdabee81aa907275a1faa95e41c704eefab9059a8a522775378d125760dd'
-            '0ae482028eecef1298b6cd5c3a82f986b01528472ed54e06d53ffc8b3220f393')
+            'f74f9102b653032524bf16f48b4d5fb89303ed3f2b5871f26b597bf59fdcab5d')
 			            
 package() {
 	local hooks="$pkgdir"/usr/share/libalpm/hooks
