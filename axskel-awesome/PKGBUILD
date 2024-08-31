@@ -1,0 +1,16 @@
+pkgname="axskel"
+pkgver="3.2"
+pkgrel="1"
+pkgdesc="skel configs and looks for AxOS Awesome Edition"
+arch=("x86_64")
+
+
+package(){
+   mkdir -p ${pkgdir}/usr/bin/
+   mkdir -p ${pkgdir}/etc/skel/
+   mkdir -p ${pkgdir}/usr/share/themes/
+   mkdir -p ${pkgdir}/usr/share/fonts/TTF/
+   cp -r ${srcdir}/.* ${pkgdir}/etc/skel/
+   cp -r ${srcdir}/fonts/* ${pkgdir}/usr/share/fonts/TTF/
+   cp -r ${srcdir}/paradise/ ${pkgdir}/usr/share/themes/
+}
