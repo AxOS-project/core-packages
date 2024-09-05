@@ -1,5 +1,5 @@
 pkgname="axskel"
-pkgver="3.2"
+pkgver="3.3"
 pkgrel="1"
 pkgdesc="skel configs and looks for AxOS Awesome Edition"
 arch=("x86_64")
