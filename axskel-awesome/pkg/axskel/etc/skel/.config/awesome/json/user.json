@@ -1,14 +1,14 @@
 {
 	"batt": "BAT0",
-	"color": "light",
+	"color": "AxOS",
 	"font": "Roboto Bold 11",
 	"fontalt": "Roboto Italic Bold 11",
 	"fonticon": "Material Icons 13",
 	"mod": "Mod4",
-	"passwd": "awesomewm",
+	"passwd": "axos",
 	"reboot": "systemctl reboot",
 	"sessionlock": false,
-	"shotdir": "~/Pictures/Screenshots",
+	"shotdir": "~/Images",
 	"shutdown": "systemctl poweroff",
-	"terminal": "st"
+	"terminal": "alacritty"
 }

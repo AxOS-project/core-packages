@@ -1,5 +1,5 @@
 pkgname="axskel"
-pkgver="4.0"
+pkgver="4.1"
 pkgrel="1"
 pkgdesc="Calla desktop environement and AxAwEd configurations"
 arch=("x86_64")

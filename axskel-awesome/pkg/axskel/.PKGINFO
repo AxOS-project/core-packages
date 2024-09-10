@@ -3,12 +3,12 @@
 pkgname = axskel
 pkgbase = axskel
 xdata = pkgtype=pkg
-pkgver = 4.0-1
+pkgver = 4.1-1
 pkgdesc = Calla desktop environement and AxAwEd configurations
 url = https://github.com/LeVraiArdox/calla
-builddate = 1725974018
+builddate = 1725977843
 packager = Unknown Packager
-size = 18951038
+size = 23910245
 arch = x86_64
 depend = xorg-server
 depend = pipewire-pulse

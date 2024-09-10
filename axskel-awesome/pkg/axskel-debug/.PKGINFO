@@ -3,10 +3,10 @@
 pkgname = axskel-debug
 pkgbase = axskel
 xdata = pkgtype=debug
-pkgver = 4.0-1
+pkgver = 4.1-1
 pkgdesc = Detached debugging symbols for axskel
 url = https://github.com/LeVraiArdox/calla
-builddate = 1725974018
+builddate = 1725977843
 packager = Unknown Packager
 size = 810616
 arch = x86_64
