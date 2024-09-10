@@ -1,16 +1,26 @@
 pkgname="axskel"
-pkgver="3.3"
+pkgver="4.0"
 pkgrel="1"
-pkgdesc="skel configs and looks for AxOS Awesome Edition"
+pkgdesc="Calla desktop environement and AxAwEd configurations"
 arch=("x86_64")
-
+depends=("xorg-server" "pipewire-pulse"
+         "brightnessctl" "inotify-tools"
+         "awesome-git" "picom" "maim"
+         "papirus-icon-theme" "noto-fonts"
+         "noto-fonts-cjk" "noto-color-emoji-fontconfig"
+         "noto-fonts-extra")
+url="https://github.com/LeVraiArdox/calla"
+optdepends=("st: terminal",
+            "vim-gtk3: vim with clipboard",
+            "nemo: file manager",
+            "network-manager-gnome: network applet",
+            "polkit-gnome: polkit",
+            "cbatticon: battery applet",
+            "blueman: bluetooth applet",
+            "xdg-user-dirs: generate home directories")
 
 package(){
-   mkdir -p ${pkgdir}/usr/bin/
-   mkdir -p ${pkgdir}/etc/skel/
-   mkdir -p ${pkgdir}/usr/share/themes/
-   mkdir -p ${pkgdir}/usr/share/fonts/TTF/
-   cp -r ${srcdir}/.* ${pkgdir}/etc/skel/
-   cp -r ${srcdir}/fonts/* ${pkgdir}/usr/share/fonts/TTF/
-   cp -r ${srcdir}/paradise/ ${pkgdir}/usr/share/themes/
+   mkdir -p "${pkgdir}/etc/"
+   mkdir -p "${pkgdir}/usr/share/fonts/TTF/"
+   cp -r "${srcdir}/skel" "${pkgdir}/etc/"
 }
