@@ -79,17 +79,19 @@ awful.keyboard.append_global_keybindings({
         { description = "open a terminal", group = "programs" }
 	),
 	awful.key(
-		{ mod }, "p", function() 
-			awful.spawn.with_shell("killall picom") 
+		{ mod }, "e", function() 
+			awful.spawn.with_shell("nautilus") 
 		end,
-        { description = "kill picom", group = "programs" }
+        { description = "open file manager", group = "programs" }
 	),
 	awful.key(
-		{ mod, "Shift" }, "p", function() 
-			awful.spawn.with_shell("picom & disown") 
+		{ mod }, "w", function() 
+			awful.spawn.with_shell("firefox") 
 		end,
-        { description = "start picom", group = "programs" }
+        { description = "open browser", group = "programs" }
 	),
+	
+
 
 	-- Screenshot
 

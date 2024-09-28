@@ -1,6 +1,6 @@
 pkgname="axskel"
-pkgver="4.1"
-pkgrel="1"
+pkgver="4.2"
+pkgrel="2"
 pkgdesc="Calla desktop environement and AxAwEd configurations"
 arch=("x86_64")
 depends=("xorg-server" "pipewire-pulse"
@@ -21,6 +21,5 @@ optdepends=("st: terminal",
 
 package(){
    mkdir -p "${pkgdir}/etc/"
-   mkdir -p "${pkgdir}/usr/share/fonts/TTF/"
    cp -r "${srcdir}/skel" "${pkgdir}/etc/"
 }

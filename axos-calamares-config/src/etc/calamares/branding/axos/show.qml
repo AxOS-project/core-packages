@@ -22,7 +22,7 @@ Presentation {
         anchors.verticalCenterOffset: 0
 
         Image {
-            id: background1
+            id: slide1Background
             source: "1.jpg"
             width: parent.width
             height: parent.height
@@ -38,7 +38,7 @@ Presentation {
         anchors.verticalCenterOffset: 0
 
         Image {
-            id: background2
+            id: slide2Background
             source: "2.png"
             width: parent.width
             height: parent.height
@@ -54,7 +54,7 @@ Presentation {
         anchors.verticalCenterOffset: 0
 
         Image {
-            id: background3
+            id: slide3Background
             source: "3.jpg"
             width: parent.width
             height: parent.height
@@ -74,4 +74,3 @@ Presentation {
         console.log("QML Component (default slideshow) deactivated");
     }
 }
-

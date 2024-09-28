@@ -1,13 +1,14 @@
-#define BG #f5f5f5
-#define FG #303030
-#define BL #505050
-#define WH #d0d0d0
-#define R #ac4142
-#define G #90a959
-#define Y #f4bf75
-#define B #6a9fb5
-#define M #aa759f
-#define C #75b5aa
+#define BG #202020
+#define FG #E8E3E3
+#define BL #0D0D0D
+#define WH #FFFFFF
+#define R #AC1412
+#define G #90A959
+#define Y #F4BF75
+#define B #6A9FB5
+#define M #AA759F
+#define C #75B5AA
+
 
 st.font: RobotoMono:size=11
 st.borderpx: 25
