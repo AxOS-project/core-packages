@@ -11,4 +11,4 @@ Target = grub2-*
 [Action]
 Description = Fixing naming for grub entries...
 When = PostTransaction
-Exec = /usr/bin/axos-hooks-extra fix-grub
+Exec = /usr/bin/axos-hooks-extra all

@@ -6,7 +6,7 @@
 
 pkgname=plymouth
 pkgver=24.004.60
-pkgrel=91
+pkgrel=1
 pkgdesc="A graphical boot splash screen with kernel mode-setting support"
 url="https://www.freedesktop.org/wiki/Software/Plymouth/"
 arch=('i686' 'x86_64')
@@ -42,7 +42,7 @@ prepare() {
 	patch -p1 -i $srcdir/plymouthd.conf.patch
 	# apply upstream patches
 	patch -p1 -i $srcdir/ply-utils.c.patch
-	patch -p1 -i $srcdir/runstatedir.patch
+	# patch -p1 -i $srcdir/runstatedir.patch
 }
 
 build() {
@@ -106,5 +106,5 @@ sha256sums=('f59bc6dea9745c32e9ca03a717adc284b0ea5677243a7769eb8a7c6cc1eba801'
             'dec28b86ddea93704f8479d33e08f81cd7ff4ccaad57e9053c23bd046db2278a'
             '74908ba59cea53c6a9ab67bb6dec1de1616f3851a0fd89bb3c157a1c54e6633a'
             'f17c33fe69c13ac97980fb6ba5b1dedba107459d82d8c781ea4f4a7bd4bb941e'
-            '1bd7693d1e135fe9e22a03f7635309e2ae616e952665d9774eb5ca4d82718e1b'
+            '194bfe9a3917f47203c9d23c25ca13b5ae8bbe836596db9a794440925ad427bf'
             'c4fdc475d35d32f8211b9b1ca860ccedcd20124b85aa4a38bb538c342ba21d8c')

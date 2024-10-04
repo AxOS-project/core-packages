@@ -53,6 +53,11 @@ ps1_replace() {
 	cp $file $HOME
 }
 
+plymouth_theme_replace() {
+    plymouth-set-default-theme axos
+    mkinitcpio -p linux
+}
+
 main() {
     local hookname="$1"
 
@@ -60,11 +65,13 @@ main() {
         os-release)  fix_os_release ;;
         lsb-release) fix_lsb_release ;;
         reload-theme) reload_theme ;;
+        reload-plymouth) plymouth_theme_replace ;;
         bash-prompt-replace) ps1_replace;;
         full)        fix_os_release
                      fix_lsb_release
                      ps1_replace
                      reload_theme
+                     plymouth_theme_replace
                      ;;
 
 	*)  echo "AxOS hooks runner"
@@ -78,7 +85,8 @@ main() {
 		echo "	 lsb-release:------------------- same as os-release but for /etc/lsb-release"
 		echo "	 reload-theme:------------------ reload the users theme and config with the latest AxOS look (avaiable only after axskel update)"
 		echo "	 bash-prompt-replace:----------- Replace the bash prompt of the user with 'λ ~'."
-        echo "   full:-------------------------- Do Everything"
+		echo "     reload-plymouth: -------------- Set the boot animation to the default AxOS theme"
+		echo "     full:-------------------------- Do Everything"
 		echo ""
 		echo "WARNING: DO NOT EXECUTE UNLESS YOU KNOW WHAT YOU ARE DOING"
 		;;

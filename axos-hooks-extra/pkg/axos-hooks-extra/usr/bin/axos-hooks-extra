@@ -13,11 +13,17 @@ fix_grub() {
 	fi
 }
 
+enable_os_prober() {
+    sed -i -e 's/#GRUB_DISABLE_OS_PROBER=.*/GRUB_DISABLE_OS_PROBER=false/g' /etc/default/grub
+}
+
 main() {
     local hookname="$1"
 
     case "$hookname" in
         fix-grub)     		fix_grub ;;
+        all)                fix_grub
+                            enable_os_prober;;
         "")           		echo "Nothing to do!";;
     esac
 }
