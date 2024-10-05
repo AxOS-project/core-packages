@@ -1,6 +1,27 @@
 #!/bin/bash
 
+# AxOS hooks runner
+# This script is used to update parts of the AxOS system.
+# Usage: axos-hooks-runner <hook name>
+# Avaiable hooks:
+#   os-release:-------------------- replace the content of /etc/os-release with the latest content
+#   lsb-release:------------------- same as os-release but for /etc/lsb-release
+#   reload-theme:------------------ reload the users theme and config with the latest AxOS look (avaiable only after axskel update)
+#   bash-prompt-replace:----------- Replace the bash prompt of the user with 'λ ~'.
+#   reload-plymouth: -------------- Set the boot animation to the default AxOS theme
+#   full:-------------------------- Do Everything
+# WARNING: DO NOT EXECUTE UNLESS YOU KNOW WHAT YOU ARE DOING
+# Author: Ardox
+# Date: 2024
+# This file is part of the AxOS project.
 ## Copyright (C) 2024 Ardox
+
+if [ -f /etc/axos-version ]; then
+    version=$(cat /etc/axos-version)
+else
+    version="24.08" # Because the new version system is above 24.08
+fi
+
 
 fix_lsb_release() {
     local file=/etc/lsb-release
@@ -11,7 +32,7 @@ fix_lsb_release() {
     fi
     sed -i "$file" \
         -e 's|^DISTRIB_ID=.*$|DISTRIB_ID=axos|' \
-        -e 's|^DISTRIB_RELEASE=.*$|DISTRIB_RELEASE=24.05|' \
+        -e "s|^DISTRIB_RELEASE=.*$|DISTRIB_RELEASE=$version|" \
         -e 's|^DISTRIB_DESCRIPTION=.*$|DISTRIB_DESCRIPTION=\"AxOS\"|'
 }
 
@@ -25,15 +46,20 @@ fix_os_release() {
         -e 's|^ID_LIKE=.*$|ID_LIKE=axos|' \
         -e 's|^BUILD_ID=.*$|BUILD_ID=rolling|' \
         -e 's|^HOME_URL=.*$|HOME_URL=\"http://www.axos-project.com\"|' \
-        -e 's|^DOCUMENTATION_URL=.*$|DOCUMENTATION_URL=\"https://axos-1.gitbook.io/\"|' \
-        -e 's|^SUPPORT_URL=.*$|SUPPORT_URL=\"https://github.com/AxOS-project/AxOS/issues\"|' \
+        -e 's|^DOCUMENTATION_URL=.*$|DOCUMENTATION_URL=\"https://wiki.axos-project.com/\"|' \
+        -e 's|^SUPPORT_URL=.*$|SUPPORT_URL=\"https://github.com/AxOS-project/AxOS/\"|' \
         -e 's|^BUG_REPORT_URL=.*$|BUG_REPORT_URL=\"https://github.com/AxOS-project/AxOS/issues\"|' \
         -e 's|^LOGO=.*$|LOGO=axos|' \
-        -e '$a\VERSION=24.08'
+        -e "s|^VERSION=.*$|VERSION=$version|"
 
     if [ -z "$(grep "^ID_LIKE=" $file)" ] && [ -n "$(grep "^ID=" $file)" ] ; then
         # add missing ID_LIKE=
         sed -i $file -e '/^ID=/a \ID_LIKE=axos'
+    fi
+
+    if ! grep -q "^VERSION=" "$file"; then
+        # add missing VERSION=
+        echo "VERSION=$version" >> "$file"
     fi
 
 	# fix issue file
@@ -85,8 +111,8 @@ main() {
 		echo "	 lsb-release:------------------- same as os-release but for /etc/lsb-release"
 		echo "	 reload-theme:------------------ reload the users theme and config with the latest AxOS look (avaiable only after axskel update)"
 		echo "	 bash-prompt-replace:----------- Replace the bash prompt of the user with 'λ ~'."
-		echo "     reload-plymouth: -------------- Set the boot animation to the default AxOS theme"
-		echo "     full:-------------------------- Do Everything"
+		echo "   reload-plymouth: -------------- Set the boot animation to the default AxOS theme"
+		echo "   full:-------------------------- Do Everything"
 		echo ""
 		echo "WARNING: DO NOT EXECUTE UNLESS YOU KNOW WHAT YOU ARE DOING"
 		;;
