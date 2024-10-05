@@ -1,0 +1,12 @@
+pkgname="sddm-theme-chili"
+pkgver="2.0"
+pkgrel="1"
+pkgdesc="Chili sddm theme"
+arch=("x86_64")
+depends=("sddm" "qt5-quickcontrols" "qt5-graphicaleffects")
+
+
+package(){
+   mkdir -p ${pkgdir}/usr/share/sddm/themes/chili
+   cp -r ${srcdir}/* ${pkgdir}/usr/share/sddm/themes/chili
+}
