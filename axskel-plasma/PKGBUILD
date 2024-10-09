@@ -1,0 +1,15 @@
+pkgname="axskel"
+pkgver="2.5"
+pkgrel="2"
+pkgdesc="skel configs and looks for AxOS"
+arch=("x86_64")
+
+
+package(){
+   mkdir -p ${pkgdir}/etc/skel/
+   mkdir -p ${pkgdir}/usr/share/
+   cp -r ${srcdir}/.config/ ${pkgdir}/etc/skel/
+   cp -r ${srcdir}/.local/ ${pkgdir}/etc/skel/
+   cp -r ${srcdir}/plasma/ ${pkgdir}/usr/share/
+   cp -r ${srcdir}/wallpapers/ ${pkgdir}/usr/share/
+}

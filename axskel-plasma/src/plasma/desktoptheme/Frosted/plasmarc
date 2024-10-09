@@ -1,0 +1,14 @@
+[Wallpaper]
+defaultWallpaperTheme=Homard
+defaultFileSuffix=.jpg
+defaultWidth=2820
+defaultHeight=2021
+
+[ContrastEffect]
+enabled=true
+contrast=0.4
+intensity=0.7
+saturation=10
+
+[AdaptiveTransparency]
+enabled=true
