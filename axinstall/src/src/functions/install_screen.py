@@ -1,0 +1,58 @@
+# installer_Screen.py
+
+#
+# Copyright 2022 user
+
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import subprocess, os, shutil
+import asyncio
+from gi.repository import Gtk, GLib, Adw
+from gettext import gettext as _
+from axinstall.utils.command import CommandUtils
+
+
+@Gtk.Template(resource_path='/com/axos-project/axinstall/pages/install_screen.ui')
+class InstallScreen(Adw.Bin):
+    __gtype_name__="InstallScreen"
+
+    log_text = Gtk.Template.Child()
+
+    def __init__(self, window, main_carousel, next_page, application, **kwargs):
+        super().__init__(**kwargs)
+        self.window = window
+        self.main_carousel = main_carousel
+        self.next_page = next_page
+
+    def install(self):
+        prefs = self.window.summary_screen.installprefs.generate_json()
+        with open(os.getenv("HOME")+"/axinstall.log", "wb") as f:
+            process=subprocess.Popen(["bash", "-c", "bash -- /usr/share/axinstall/axinstall/scripts/install.sh"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+            for c in iter(lambda: process.stdout.read(1), b""):
+                log=c
+                try:
+                    GLib.idle_add(self.update_output, c.decode("utf-8"))
+                except:
+                    pass
+                f.write(c)
+
+    def carousel_next(self, result, error=None):
+        self.main_carousel.scroll_to(self.next_page, True)
+
+    def update_output(self, message):
+        log=self.log_text.get_label()
+        new_log=f"{log}{message}"
+        self.log_text.set_label(new_log)
+

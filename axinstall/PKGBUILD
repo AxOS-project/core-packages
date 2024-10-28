@@ -1,0 +1,19 @@
+pkgname=axinstall
+pkgver=0.1.0
+pkgrel=3
+pkgdesc="AxOS installer"
+arch=('x86_64')
+license=('GPL')
+depends=('python' 'python-gobject' 'gtk4' 'libadwaita' 'python-cairo' 'openssl' 'python-pytz' 'gparted' 'vte4' 'meson' 'ninja' 'libadwaita' 'desktop-file-utils' 'appstream-glib')
+# sha256sums=('SKIP') 
+
+build() {
+  cd "${srcdir}"
+  meson --prefix=/usr _build
+  ninja -C _build
+}
+
+package() {
+  cd "${srcdir}/_build"
+  DESTDIR="${pkgdir}" ninja install
+}
