@@ -22,6 +22,10 @@ pub enum Command {
     #[clap(name = "install-base")]
     InstallBase(InstallBaseArgs),
 
+    /// Setup Arch Linux keyring
+    #[clap(name = "setup-keyring")]
+    SetupKeyring,
+
     /// Generate fstab file for mounting partitions
     #[clap(name = "genfstab")]
     GenFstab,

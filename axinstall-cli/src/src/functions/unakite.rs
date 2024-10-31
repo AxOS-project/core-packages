@@ -112,6 +112,7 @@ pub fn setup_arch(root: &str, oldroot: &str, efi: bool, efidir: &str, bootdev: &
     log::debug!("Setting up AxOS");
     remount(root, oldroot, efi, efidir, bootdev, true);
     base::install_base_packages("linux".to_string());
+    base::setup_archlinux_keyring();
     base::genfstab();
     locale::set_locale("en_US.UTF-8 UTF-8".to_string());
     locale::set_timezone("Europe/Berlin"); // TODO: get the proper timezone

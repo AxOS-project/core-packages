@@ -32,6 +32,9 @@ pub fn install_base_packages(kernel: String) {
         "nano",
         "sudo",
         "curl",
+        "wget",
+        "git",
+        "archlinux-keyring",
         // Base AxOS
         "about-axos",
         "axos-hooks",
@@ -81,6 +84,22 @@ pub fn install_base_packages(kernel: String) {
             vec![String::from("enable"), String::from("cups")],
         ),
         "Enable CUPS",
+    );
+}
+
+pub fn setup_archlinux_keyring() {
+    exec_eval(
+        exec_chroot("pacman-key", vec![
+            String::from("--init"),
+        ]),
+        "Initialize pacman keyring",
+    );
+    exec_eval(
+        exec_chroot("pacman-key", vec![
+            String::from("--populate"),
+            String::from("archlinux"),
+        ]),
+        "Populate pacman keyring",
     );
 }
 

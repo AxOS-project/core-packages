@@ -110,6 +110,7 @@ pub fn read_config(configpath: PathBuf) {
         config.unakite.enable,
     );
     base::install_base_packages(config.kernel);
+    base::setup_archlinux_keyring();
     base::genfstab();
     println!();
     log::info!("Installing bootloader : {}", config.bootloader.r#type);

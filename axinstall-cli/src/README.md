@@ -88,6 +88,11 @@ axinstall-cli is an installer backend for AxOS.
 # axinstall-cli flatpak
 ```
 
+### Setup keyring
+```sh
+# axinstall-cli setup-keyring
+```
+
 ### Debug logging
 
 debug messages:

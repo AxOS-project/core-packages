@@ -27,6 +27,9 @@ fn main() {
         Command::InstallBase(args) => {
             base::install_base_packages(args.kernel);
         }
+        Command::SetupKeyring => {
+            base::setup_archlinux_keyring();
+        }
         Command::GenFstab => {
             base::genfstab();
         }
