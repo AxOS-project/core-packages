@@ -107,9 +107,9 @@ msgstr "Timeshift"
 msgid "Support snapshots as a means to roll back to earlier states of the system."
 msgstr "Support snapshots as a means to roll back to earlier states of the system."
 
-#: src/pages/misc_screen.ui:57
-msgid "Zramd"
-msgstr "Zramd"
+#: src/pages/misc_screen.ui:41 
+msgid "Install NVIDIA drivers"
+msgstr "Install NVIDIA drivers"
 
 #: src/pages/misc_screen.ui:58
 msgid "Creates a compressed area of Swap in RAM."
@@ -227,9 +227,9 @@ msgstr "ipv6 enabled/disabled"
 msgid "timeshift enabled/disabled"
 msgstr "timeshift enabled/disabled"
 
-#: src/pages/summary_screen.ui:208
-msgid "zramd enabled/disabled"
-msgstr "zramd enabled/disabled"
+#: src/pages/summary_screen.ui:230
+msgid "Install Nvidia drivers"
+msgstr "Install Nvidia drivers"
 
 #: src/pages/summary_screen.ui:238 src/pages/timezone_screen.ui:59
 #: src/pages/user_screen.ui:83

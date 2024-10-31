@@ -32,13 +32,14 @@ class MiscScreen(AxinstallScreen, Adw.Bin):
     #ipv_switch = Gtk.Template.Child()
     #timeshift_switch = Gtk.Template.Child()
     #zramd_switch = Gtk.Template.Child()
+    nvidia_switch = Gtk.Template.Child()
 
     hostname = "axos"
     ipv_enabled = False
     zramd_enabled = False
     timeshift_enabled = False
-    zramd_enabled = False
     move_to_summary = False
+    nvidia_enabled = False
 
     def __init__(self, window, application, **kwargs):
         super().__init__(**kwargs)
@@ -51,3 +52,4 @@ class MiscScreen(AxinstallScreen, Adw.Bin):
         #self.ipv_enabled = self.ipv_switch.get_state()
         #self.zramd_enabled = self.zramd_switch.get_state()
         #self.timeshift_enabled = self.timeshift_switch.get_state()
+        self.nvidia_enabled = self.nvidia_switch.get_state()

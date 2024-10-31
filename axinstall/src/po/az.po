@@ -110,7 +110,7 @@ msgid "Support snapshots as a means to roll back to earlier states of the system
 msgstr ""
 
 #: src/pages/misc_screen.ui:57
-msgid "Zramd"
+msgid "Install NVIDIA drivers"
 msgstr ""
 
 #: src/pages/misc_screen.ui:58
@@ -227,8 +227,8 @@ msgstr ""
 msgid "timeshift enabled/disabled"
 msgstr ""
 
-#: src/pages/summary_screen.ui:208
-msgid "zramd enabled/disabled"
+#: src/pages/summary_screen.ui:230
+msgid "Install Nvidia drivers"
 msgstr ""
 
 #: src/pages/summary_screen.ui:238 src/pages/timezone_screen.ui:59

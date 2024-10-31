@@ -35,6 +35,7 @@ class InstallPrefs:
         hostname,
         #timeshift_enabled,
         #zramd_enabled,
+        nvidia_enabled,
         desktop,
         partition_mode,
         partitions,
@@ -53,6 +54,7 @@ class InstallPrefs:
         self.hostname = hostname if len(hostname) != 0 else "axos"
         #self.timeshift_enabled = False
         #self.zramd_enabled = False
+        self.nvidia_enabled = nvidia_enabled
         self.desktop = desktop
         self.partition_mode = partition_mode
         self.partitions = partitions
@@ -91,6 +93,7 @@ class InstallPrefs:
             "timeshift": False,
             "extra_packages": ["firefox"],
             "flatpak": False,
+            "nvidia": False,
             "zramd": False,
             "unakite": {
                 "enable": False,

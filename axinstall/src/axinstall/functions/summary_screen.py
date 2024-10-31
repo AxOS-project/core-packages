@@ -50,6 +50,8 @@ class SummaryScreen(AxinstallScreen, Adw.Bin):
     # timeshift_button = Gtk.Template.Child()
     # zramd_label = Gtk.Template.Child()
     # zramd_button = Gtk.Template.Child()
+    nvidia_label = Gtk.Template.Child()
+    nvidia_button = Gtk.Template.Child()
     added_locales = []
     # unakite_label = Gtk.Template.Child()
 
@@ -96,6 +98,9 @@ class SummaryScreen(AxinstallScreen, Adw.Bin):
         #self.zramd_button.connect(
         #    "clicked", self.window.show_page, self.window.misc_screen
         #)
+        self.nvidia_button.connect(
+            "clicked", self.window.show_page, self.window.misc_screen
+        )
 
     def on_show(self):
         self.timezone_label.set_title(
@@ -155,6 +160,11 @@ class SummaryScreen(AxinstallScreen, Adw.Bin):
         #    else "zramd disabled"
         #)
         # self.unakite_label.set_title("Unakite enabled "+"enabled" if self.window.misc_screen.)
+        self.nvidia_label.set_title(
+            "Nvidia drivers enabled"
+            if self.window.misc_screen.nvidia_enabled
+            else "Nvidia drivers disabled"
+        )
 
         partitions = []
         for i in range(0, len(self.window.available_partitions)):
@@ -175,6 +185,7 @@ class SummaryScreen(AxinstallScreen, Adw.Bin):
             hostname=self.window.misc_screen.hostname,
             #timeshift_enabled=self.window.misc_screen.timeshift_enabled,
             #zramd_enabled=self.window.misc_screen.zramd_enabled,
+            nvidia_enabled=self.window.misc_screen.nvidia_enabled,
             desktop=self.window.desktop_screen.chosen_desktop,
             partition_mode=self.window.partition_mode,
             partitions=partitions,

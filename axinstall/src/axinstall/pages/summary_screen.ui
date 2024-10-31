@@ -223,6 +223,21 @@
                     <child>
                       <object class="GtkListBox" id="misc_listbox">
                         <property name="selection-mode">none</property>
+                        <child>
+                          <object class="AdwActionRow" id="nvidia_label">
+                            <property
+                              name="title"
+                              translatable="true">Install Nvidia drivers</property>
+                            <child>
+                              <object class="GtkButton" id="nvidia_button">
+                                <property name="valign">center</property>
+                                <property name="halign">center</property>
+                                <property
+                                  name="icon-name">document-edit-symbolic</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
                         <style>
                           <class name="boxed-list"/>
                         </style>
