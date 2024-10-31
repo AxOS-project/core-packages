@@ -67,6 +67,30 @@ pub fn install_base_packages(kernel: String) {
         "ttf-liberation",
         "dnsmasq",
         "networkmanager",
+        "xdg-user-dirs",
+        "firefox",
+        "cmake",
+        "python",
+        "python-pip",
+        "bash",
+        "bash-completion",
+        "deepin-icon-theme",
+        "make",
+        "inxi",
+        "htop",
+        "fwupd",
+        "sddm-theme-chili",
+        "power-profiles-daemon",
+        // Graphic drivers
+        "xf86-video-amdgpu",
+        "xf86-video-intel",
+        "xf86-video-nouveau",
+        "xf86-video-vmware",
+        "xf86-video-virtualbox",
+        "vulkan-intel",
+        "vulkan-radeon",
+        "vulkan-icd-loader",
+        "virtualbox-guest-utils",
     ]);
     files::copy_file("/etc/pacman.conf", "/mnt/etc/pacman.conf");
 
@@ -206,6 +230,10 @@ pub fn install_flatpak() {
         ),
         "add flathub remote",
     )
+}
+
+pub fn install_nvidia() {
+    install(vec!["nvidia", "nvidia-utils", "nvidia-settings"]);
 }
 
 pub fn install_zram() {

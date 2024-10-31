@@ -64,6 +64,10 @@ pub enum Command {
     #[clap(name = "flatpak")]
     Flatpak,
 
+    /// Install and setup Nvidia drivers
+    #[clap(name = "nvidia")]
+    Nvidia,
+
     /// Setup Unakite
     #[clap(name = "unakite")]
     Unakite(UnakiteArgs),
@@ -204,6 +208,7 @@ pub struct NetworkingArgs {
     #[clap(long)]
     pub ipv6: bool,
 }
+
 
 #[derive(Debug, Subcommand)]
 pub enum UsersSubcommand {

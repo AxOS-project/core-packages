@@ -16,6 +16,7 @@ struct Config {
     desktop: String,
     timeshift: bool,
     flatpak: bool,
+    nvidia: bool,
     zramd: bool,
     extra_packages: Vec<String>,
     unakite: Unakite,
@@ -182,6 +183,11 @@ pub fn read_config(configpath: PathBuf) {
     log::info!("Enabling flatpak : {}", config.flatpak);
     if config.flatpak {
         base::install_flatpak();
+    }
+    println!();
+    log::info!("Enabling nvidia : {}", config.nvidia);
+    if config.nvidia {
+        base::install_nvidia();
     }
     log::info!("Extra packages : {:?}", config.extra_packages);
     let mut extra_packages: Vec<&str> = Vec::new();

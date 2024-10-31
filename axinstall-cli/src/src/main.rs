@@ -76,6 +76,9 @@ fn main() {
         Command::Flatpak => {
             base::install_flatpak();
         }
+        Command::Nvidia => {
+            base::install_nvidia();
+        }
         Command::Unakite(args) => {
             unakite::setup_arch(
                 &args.root,
