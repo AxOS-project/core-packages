@@ -81,6 +81,8 @@ pub fn install_base_packages(kernel: String) {
         "fwupd",
         "sddm-theme-chili",
         "power-profiles-daemon",
+        "ntp",
+        "kf6",
         // Graphic drivers
         "xf86-video-amdgpu",
         "xf86-video-intel",
