@@ -1,4 +1,4 @@
-project('axinstaller',
+project('axinstall',
           version: '0.1.0',
     meson_version: '>= 0.59.0',
   default_options: [ 'warning_level=2',
@@ -13,7 +13,7 @@ gnome = import('gnome')
 
 
 subdir('data')
-subdir('src')
+subdir('axinstall')
 subdir('po')
 
 gnome.post_install(

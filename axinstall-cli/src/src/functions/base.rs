@@ -39,7 +39,7 @@ pub fn install_base_packages(kernel: String) {
         "plymouth-theme-axos",
         // Extra goodies
         "neofetch",
-        "axos/plymouth",
+        "plymouth",
         "plymouth-theme-axos",
         // Fonts
         "noto-fonts",
@@ -47,7 +47,6 @@ pub fn install_base_packages(kernel: String) {
         "noto-fonts-cjk",
         "noto-fonts-extra",
         "ttf-nerd-fonts-symbols-common",
-        "vazirmatn-fonts",
         // Common packages for all desktops
         "xterm",
         "pipewire",
@@ -100,7 +99,7 @@ pub fn genfstab() {
 
 pub fn install_bootloader_efi(efidir: PathBuf) {
     install::install(vec![
-        "axos/grub",
+        "grub",
         "efibootmgr",
         "os-prober",
     ]);

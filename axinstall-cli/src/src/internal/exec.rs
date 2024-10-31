@@ -18,6 +18,7 @@ pub fn exec_chroot(
     returncode
 }
 
+/* 
 pub fn exec_workdir(
     command: &str,
     workdir: &str,
@@ -29,3 +30,4 @@ pub fn exec_workdir(
         .status();
     returncode
 }
+*/

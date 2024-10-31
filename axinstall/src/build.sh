@@ -21,7 +21,7 @@ elif [[ $1 == "build-install" ]]; then
 else 
 	echo "Unkown command $1"
 	echo "usage:"
-	echo "build 		build axinstall"
-	echo "install	install axinstall"
+	echo "build 		build axinstall gui"
+	echo "install	install axinstall gui"
 	echo "build-install	build and install axinstall"
 fi

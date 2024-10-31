@@ -88,8 +88,8 @@ msgid "Miscellaneous"
 msgstr "Miscellaneous"
 
 #: src/pages/misc_screen.ui:22
-msgid "Enter Hostname"
-msgstr "Enter Hostname"
+msgid "Custom Hostname"
+msgstr "Custom Hostname"
 
 #: src/pages/misc_screen.ui:33
 msgid "IPv6 loopback"
@@ -249,8 +249,8 @@ msgid "Create User"
 msgstr "Create User"
 
 #: src/pages/user_screen.ui:16
-msgid "You can add more users in the settings on the installed system."
-msgstr "You can add more users in the settings on the installed system."
+msgid "You can add additional users later."
+msgstr "You can add additional users later."
 
 #: src/pages/user_screen.ui:23
 msgid "Enter Username"
@@ -265,8 +265,8 @@ msgid "Re-enter Password"
 msgstr "Re-enter Password"
 
 #: src/pages/user_screen.ui:44
-msgid "Enable Administrative Rights for User"
-msgstr "Enable Administrative Rights for User"
+msgid "Adminstrator"
+msgstr "Adminstrator"
 
 #: src/pages/user_screen.ui:56
 msgid "Enable Superuser Account"

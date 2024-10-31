@@ -8,7 +8,9 @@ use crate::functions::*;
 use clap::Parser;
 
 fn main() {
-    human_panic::setup_panic!();
+    std::panic::set_hook(Box::new(|info| {
+        println!("Panic occurred: {:?}", info);
+    }));
     let opt: Opt = Opt::parse();
     logging::init(opt.verbose);
     match opt.command {
@@ -40,7 +42,7 @@ fn main() {
         Command::Locale(args) => {
             locale::set_locale(args.locales.join(" "));
             locale::set_keyboard(&args.keyboard);
-            locale::set_timezone(&args.timezone);
+            locale::set_timezone(&args.timezone); 
         }
         Command::Networking(args) => {
             if args.ipv6 {
