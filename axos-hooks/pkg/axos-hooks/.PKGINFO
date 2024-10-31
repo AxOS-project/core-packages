@@ -6,7 +6,7 @@ xdata = pkgtype=pkg
 pkgver = 3.9-1
 pkgdesc = Hooks for AxOS filesystem
 url = 
-builddate = 1728133910
+builddate = 1730382947
 packager = Unknown Packager
 size = 434738
 arch = x86_64
