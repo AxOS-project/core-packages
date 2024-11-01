@@ -35,6 +35,7 @@ pub fn install_base_packages(kernel: String) {
         "wget",
         "git",
         "archlinux-keyring",
+        "grep",
         // Base AxOS
         "about-axos",
         "axos-hooks",
@@ -88,7 +89,6 @@ pub fn install_base_packages(kernel: String) {
         "xf86-video-intel",
         "xf86-video-nouveau",
         "xf86-video-vmware",
-        "xf86-video-virtualbox",
         "vulkan-intel",
         "vulkan-radeon",
         "vulkan-icd-loader",
