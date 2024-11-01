@@ -73,6 +73,9 @@ fn main() {
                 users::root_pass(&password);
             }
         }
+        Command::CopyLive => {
+            base::copy_live_config();
+        }
         Command::Flatpak => {
             base::install_flatpak();
         }

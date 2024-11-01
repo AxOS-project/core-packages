@@ -43,7 +43,7 @@ pub fn install_base_packages(kernel: String) {
         "plymouth-theme-axos",
         // Extra goodies
         "neofetch",
-        "plymouth",
+        "axos/plymouth",
         "plymouth-theme-axos",
         // Fonts
         "noto-fonts",
@@ -144,7 +144,7 @@ pub fn genfstab() {
 
 pub fn install_bootloader_efi(efidir: PathBuf) {
     install::install(vec![
-        "grub",
+        "axos/grub",
         "efibootmgr",
         "os-prober",
     ]);
@@ -216,6 +216,13 @@ pub fn setup_timeshift() {
         exec_chroot("timeshift", vec![String::from("--create")]),
         "setup timeshift",
     )
+}
+
+pub fn copy_live_config() {
+    files::copy_file("/etc/pacman.conf", "/mnt/etc/pacman.conf");
+    files::copy_file("/etc/axos-version", "/mnt/etc/axos-version");
+    files::copy_file("/etc/sddm.conf.d/settings.conf", "/mnt/etc/sddm.conf.d/settings.conf");
+    files::copy_file("/etc/mkinitcpio.conf", "/mnt/etc/mkinitcpio.conf");
 }
 
 pub fn install_flatpak() {

@@ -185,6 +185,9 @@ pub fn read_config(configpath: PathBuf) {
         base::install_flatpak();
     }
     println!();
+    log::info!("Copying live config");
+    base::copy_live_config();
+    println!();
     log::info!("Enabling nvidia : {}", config.nvidia);
     if config.nvidia {
         base::install_nvidia();

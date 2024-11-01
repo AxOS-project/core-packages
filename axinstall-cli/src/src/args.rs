@@ -60,6 +60,9 @@ pub enum Command {
         subcommand: UsersSubcommand,
     },
 
+    #[clap(name = "copy-live-config")]
+    CopyLive,
+
     /// Install Flatpak and enable FlatHub
     #[clap(name = "flatpak")]
     Flatpak,
