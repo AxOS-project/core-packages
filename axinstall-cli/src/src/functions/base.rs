@@ -221,6 +221,7 @@ pub fn setup_timeshift() {
 pub fn copy_live_config() {
     files::copy_file("/etc/pacman.conf", "/mnt/etc/pacman.conf");
     files::copy_file("/etc/axos-version", "/mnt/etc/axos-version");
+    std::fs::create_dir_all("/mnt/etc/sddm.conf.d").unwrap();
     files::copy_file("/etc/sddm.conf.d/settings.conf", "/mnt/etc/sddm.conf.d/settings.conf");
     files::copy_file("/etc/mkinitcpio.conf", "/mnt/etc/mkinitcpio.conf");
 }
