@@ -93,6 +93,9 @@ pub fn install_base_packages(kernel: String) {
         "vulkan-radeon",
         "vulkan-icd-loader",
         "virtualbox-guest-utils",
+        // Chaotic-AUR
+        "chaotic-keyring",
+        "chaotic-mirrorlist",
     ]);
     files::copy_file("/etc/pacman.conf", "/mnt/etc/pacman.conf");
 
