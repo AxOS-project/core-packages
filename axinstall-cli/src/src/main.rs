@@ -59,20 +59,6 @@ fn main() {
         Command::Zram => {
             base::install_zram();
         }
-        Command::Users { subcommand } => match subcommand {
-            UsersSubcommand::NewUser(args) => {
-                users::new_user(
-                    &args.username,
-                    args.hasroot,
-                    &args.password,
-                    true,
-                    &args.shell,
-                );
-            }
-            UsersSubcommand::RootPass { password } => {
-                users::root_pass(&password);
-            }
-        }
         Command::CopyLive => {
             base::copy_live_config();
         }
@@ -97,5 +83,20 @@ fn main() {
         Command::Desktops { desktop } => {
             desktops::install_desktop_setup(desktop);
         }
+        Command::Users { subcommand } => match subcommand {
+            UsersSubcommand::NewUser(args) => {
+                users::new_user(
+                    &args.username,
+                    args.hasroot,
+                    &args.password,
+                    true,
+                    &args.shell,
+                );
+            }
+            UsersSubcommand::RootPass { password } => {
+                users::root_pass(&password);
+            }
+        }
+
     }
 }

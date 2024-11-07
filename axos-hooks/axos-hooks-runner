@@ -67,7 +67,14 @@ fix_os_release() {
 }
 
 reload_theme() {
-	pacman -Sy axskel --noconfirm
+    if pacman -Qs axskel-awesome > /dev/null; then
+        packagename=axskel-awesome
+    elif pacman -Qs axskel-hypr > /dev/null; then
+        packagename=axskel-hypr
+    else
+        packagename=axskel
+    fi
+    pacman -Sy $packagename --noconfirm
 	cp -r /etc/skel/.local $HOME/
     cp -r /etc/skel/.config $HOME/
     cp -r /etc/skel/.bashrc $HOME/

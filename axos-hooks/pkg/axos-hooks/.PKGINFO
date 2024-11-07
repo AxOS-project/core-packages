@@ -3,11 +3,11 @@
 pkgname = axos-hooks
 pkgbase = axos-hooks
 xdata = pkgtype=pkg
-pkgver = 3.9-1
+pkgver = 3.10-1
 pkgdesc = Hooks for AxOS filesystem
 url = 
-builddate = 1730382947
+builddate = 1730561005
 packager = Unknown Packager
-size = 434738
+size = 434958
 arch = x86_64
 license = GPL3
