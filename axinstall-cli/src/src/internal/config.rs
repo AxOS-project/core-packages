@@ -51,20 +51,21 @@ struct Networking {
 }
 
 #[derive(Serialize, Deserialize)]
-struct Users {
-    name: String,
-    password: String,
-    hasroot: bool,
-    shell: String,
-}
-
-#[derive(Serialize, Deserialize)]
 struct Unakite {
     enable: bool,
     root: String,
     oldroot: String,
     efidir: String,
     bootdev: String,
+}
+
+
+#[derive(Serialize, Deserialize)]
+struct Users {
+    name: String,
+    password: String,
+    hasroot: bool,
+    shell: String,
 }
 
 pub fn read_config(configpath: PathBuf) {
@@ -143,6 +144,19 @@ pub fn read_config(configpath: PathBuf) {
         base::install_zram();
     }
     println!();
+    log::info!("Installing desktop : {:?}", config.desktop);
+    /*if let Some(desktop) = &config.desktop {
+        desktops::install_desktop_setup(*desktop);
+    }*/
+    match config.desktop.to_lowercase().as_str() {
+        "kde" => desktops::install_desktop_setup(DesktopSetup::Kde),
+        "plasma" => desktops::install_desktop_setup(DesktopSetup::Kde),
+        "awesome" => desktops::install_desktop_setup(DesktopSetup::Awesome),
+        "hyprland" => desktops::install_desktop_setup(DesktopSetup::Hyprland),
+        "none/diy" => desktops::install_desktop_setup(DesktopSetup::None),
+        _ => log::info!("No desktop setup selected!"),
+    }
+    println!();
     println!("---------");
     for i in 0..config.users.len() {
         log::info!("Creating user : {}", config.users[i].name);
@@ -161,19 +175,7 @@ pub fn read_config(configpath: PathBuf) {
     println!();
     log::info!("Setting root password : {}", config.rootpass);
     users::root_pass(config.rootpass.as_str());
-    println!();
-    log::info!("Installing desktop : {:?}", config.desktop);
-    /*if let Some(desktop) = &config.desktop {
-        desktops::install_desktop_setup(*desktop);
-    }*/
-    match config.desktop.to_lowercase().as_str() {
-        "kde" => desktops::install_desktop_setup(DesktopSetup::Kde),
-        "plasma" => desktops::install_desktop_setup(DesktopSetup::Kde),
-        "awesome" => desktops::install_desktop_setup(DesktopSetup::Awesome),
-        "hyprland" => desktops::install_desktop_setup(DesktopSetup::Hyprland),
-        "none/diy" => desktops::install_desktop_setup(DesktopSetup::None),
-        _ => log::info!("No desktop setup selected!"),
-    }
+
     println!();
     log::info!("Enabling timeshift : {}", config.timeshift);
     if config.timeshift {

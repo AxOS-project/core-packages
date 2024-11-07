@@ -118,13 +118,6 @@ pub fn setup_arch(root: &str, oldroot: &str, efi: bool, efidir: &str, bootdev: &
     locale::set_timezone("Europe/Berlin"); // TODO: get the proper timezone
     network::set_hostname("axos");
     network::create_hosts();
-    users::new_user(
-        "root",
-        true,
-        "root", // Change this to a secure password
-        false,
-        "/bin/bash",
-    );
     exec_eval(
         exec(
             "sed",
@@ -142,6 +135,13 @@ pub fn setup_arch(root: &str, oldroot: &str, efi: bool, efidir: &str, bootdev: &
     }
     users::root_pass("root"); // Change this to a secure password
     desktops::install_desktop_setup(DesktopSetup::Kde);
+    users::new_user(
+        "root",
+        true,
+        "root", // Change this to a secure password
+        false,
+        "/bin/bash",
+    );
     install(vec!["gparted", "firefox"]);
     exec_eval(
         exec(

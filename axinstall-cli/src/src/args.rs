@@ -53,13 +53,6 @@ pub enum Command {
     #[clap(name = "zramd")]
     Zram,
 
-    /// Configure users and passwords
-    #[clap(name = "users")]
-    Users {
-        #[clap(subcommand)]
-        subcommand: UsersSubcommand,
-    },
-
     #[clap(name = "copy-live-config")]
     CopyLive,
 
@@ -88,6 +81,14 @@ pub enum Command {
         /// The desktop setup to use
         #[clap(arg_enum)]
         desktop: DesktopSetup,
+    },
+
+
+    /// Configure users and passwords
+    #[clap(name = "users")]
+    Users {
+        #[clap(subcommand)]
+        subcommand: UsersSubcommand,
     },
 }
 
@@ -212,20 +213,22 @@ pub struct NetworkingArgs {
     pub ipv6: bool,
 }
 
+#[derive(Debug, ArgEnum, Copy, Clone, Ord, PartialOrd, Eq, PartialEq, Serialize, Deserialize)]
+pub enum DesktopSetup {
 
-#[derive(Debug, Subcommand)]
-pub enum UsersSubcommand {
-    /// Create a new user
-    #[clap(name="new-user", aliases=&["newUser"])]
-    NewUser(NewUserArgs),
+    #[clap(name = "kde", aliases = ["plasma"])]
+    Kde,
 
-    /// Set the password of the root user
-    #[clap(name="root-password", aliases=&["root-pass", "rootPass"])]
-    RootPass {
-        /// The password to set. NOTE: Takes hashed password, use `openssl passwd -1 <password>` to generate the hash.
-        password: String,
-    },
+    #[clap(name = "awesome")]
+    Awesome,
+
+    #[clap(name = "hyprland")]
+    Hyprland,
+
+    #[clap(name = "None/DIY")]
+    None,
 }
+
 
 #[derive(Debug, Args)]
 pub struct NewUserArgs {
@@ -246,18 +249,17 @@ pub struct NewUserArgs {
     pub shell: String,
 }
 
-#[derive(Debug, ArgEnum, Copy, Clone, Ord, PartialOrd, Eq, PartialEq, Serialize, Deserialize)]
-pub enum DesktopSetup {
 
-    #[clap(name = "kde", aliases = ["plasma"])]
-    Kde,
+#[derive(Debug, Subcommand)]
+pub enum UsersSubcommand {
+    /// Create a new user
+    #[clap(name="new-user", aliases=&["newUser"])]
+    NewUser(NewUserArgs),
 
-    #[clap(name = "awesome")]
-    Awesome,
-
-    #[clap(name = "hyprland")]
-    Hyprland,
-
-    #[clap(name = "None/DIY")]
-    None,
+    /// Set the password of the root user
+    #[clap(name="root-password", aliases=&["root-pass", "rootPass"])]
+    RootPass {
+        /// The password to set. NOTE: Takes hashed password, use `openssl passwd -1 <password>` to generate the hash.
+        password: String,
+    },
 }
