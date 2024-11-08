@@ -7,7 +7,7 @@ pub fn install_desktop_setup(desktop_setup: DesktopSetup) {
     log::debug!("Installing {:?}", desktop_setup);
     match desktop_setup {
         DesktopSetup::Kde => install_kde(),
-        DesktopSetup::Awesome => install_awesome(),
+        DesktopSetup::Calla => install_calla(),
         DesktopSetup::Hyprland => install_hyprland(),
         DesktopSetup::None => log::debug!("No desktop setup selected"),
     }
@@ -25,7 +25,7 @@ fn install_networkmanager() {
     );
 }
 
-fn install_awesome() {
+fn install_calla() {
     install(vec![
         "xorg",
         "awesome-git",

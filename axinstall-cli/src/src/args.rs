@@ -219,8 +219,8 @@ pub enum DesktopSetup {
     #[clap(name = "kde", aliases = ["plasma"])]
     Kde,
 
-    #[clap(name = "awesome")]
-    Awesome,
+    #[clap(name = "calla")]
+    Calla,
 
     #[clap(name = "hyprland")]
     Hyprland,

@@ -151,7 +151,7 @@ pub fn read_config(configpath: PathBuf) {
     match config.desktop.to_lowercase().as_str() {
         "kde" => desktops::install_desktop_setup(DesktopSetup::Kde),
         "plasma" => desktops::install_desktop_setup(DesktopSetup::Kde),
-        "awesome" => desktops::install_desktop_setup(DesktopSetup::Awesome),
+        "calla" => desktops::install_desktop_setup(DesktopSetup::Calla),
         "hyprland" => desktops::install_desktop_setup(DesktopSetup::Hyprland),
         "none/diy" => desktops::install_desktop_setup(DesktopSetup::None),
         _ => log::info!("No desktop setup selected!"),
