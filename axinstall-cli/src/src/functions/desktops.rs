@@ -125,7 +125,7 @@ fn install_hyprland() {
         "hyprutils-git",
         "hyprlang-git",
         "hyprcursor-git",
-        "hypride-git",
+        "hypridle-git",
         "hyprpicker-git",
         // Illogical Impulse
         "illogical-impulse-ags",
