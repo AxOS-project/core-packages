@@ -1,5 +1,5 @@
 desktops = [
     "Plasma",
-    "Awesome",
+    "Calla",
     "Hyprland",
 ]
