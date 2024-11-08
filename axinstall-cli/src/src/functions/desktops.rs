@@ -50,6 +50,7 @@ fn install_calla() {
         "noto-fonts-emoji",
         "noto-fonts-extra",
         "papirus-icon-theme",
+        "ttf-material-icons-git",
         "ttf-material-design-icons-extended",
         "playerctl",
         "redshift",
